@@ -142,7 +142,7 @@ _installCommonDev() {
         tar -xf boost_${boostVersionUnderscore}.tar.gz
         cd boost_${boostVersionUnderscore}
         ./bootstrap.sh --prefix="${boostPrefix}"
-        ./b2 install --with-iostreams --with-test --with-serialization --with-system --with-thread -j $(nproc)
+        ./b2 install --with-iostreams --with-test --with-serialization --with-system --with-thread --with-filesystem -j $(nproc)
     else
         echo "Boost already installed."
     fi
